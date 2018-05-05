@@ -3,7 +3,7 @@ import {
 	Platform,
 	StyleSheet,Button,
 	Text,TextInput,
-	View
+	View,Image
 } from 'react-native';
 
 const data =[{
@@ -33,24 +33,34 @@ const data =[{
 	"city": "jabekgb",
 	"type": "currency",
 	"id":4
+},
+{
+	"name": "kjbakgb",
+	"age": 30,
+	"city": "jabekgb",
+	"type": "currency",
+	"id":5
 }];
 	
-export default class ButtonComponent extends Component {
+export default class ImageComponent extends Component {
     render() {
 		return (
+		
 			<View>
 			{data.map(function(row){
-				if(row.type == "button")
-					return(
-						<Button
-						key={row.id}
-						title={row.name}
-						color="#841584"
-						accessibilityLabel="Learn more about this purple button"
-						/>
-					)
+				if(row.type == "currency")
+					return(	
+                        <View>
+                            <Image source={require('./Images/rupee-indian.png')} />
+                            <TextInput
+                            editable = {true}
+                            maxLength = {40}
+                            />
+                        </View>
+                    )
 				})}	
-		</View>
+	   
+</View>
 		);
 	}
 }

@@ -4,6 +4,7 @@ import {
 	StyleSheet,Button,
 	Text,TextInput,
 	View,} from 'react-native';
+
 const data =[{
 	"name": "abc",
 	"age": 31,
@@ -29,11 +30,11 @@ const data =[{
 	"name": "kjbakgb",
 	"age": 30,
 	"city": "jabekgb",
-	"type": "textinput",
+	"type": "currency",
 	"id":4
 }];
 	
-export class TextInputComponent extends Component {
+export default class TextInputComponent extends Component {
     render() {
 		return (
 			<View>

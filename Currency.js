@@ -3,9 +3,8 @@ import {
 	Platform,
 	StyleSheet,Button,
 	Text,TextInput,
-	View
+	View,Image
 } from 'react-native';
-
 
 const data =[{
 	"name": "abc",
@@ -35,17 +34,26 @@ const data =[{
 	"type": "currency",
 	"id":4
 }];
-export default class TextComponent extends Component {
+	
+export default class CurrencyComponent extends Component {
     render() {
 		return (
+		
 			<View>
-		{data.map(function(row){
-			if(row.type == "text")
-				return(
-					<Text key={row.id}> {row.name} </Text>	
-				)
-			})}	
-	</View>
+			{data.map(function(row){
+				if(row.type == "currency")
+					return(	
+                        <View>
+                            <Image source={require('./Images/rupee-indian.png')} />
+                            <TextInput
+                            editable = {true}
+                            maxLength = {40}
+                            />
+                        </View>
+                    )
+				})}	
+	   
+</View>
 		);
 	}
 }
