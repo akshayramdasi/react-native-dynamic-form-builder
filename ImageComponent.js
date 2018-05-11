@@ -38,8 +38,9 @@ const data =[{
 	"name": "kjbakgb",
 	"age": 30,
 	"city": "jabekgb",
-	"type": "currency",
-	"id":5
+	"type": "image",
+	"id":15
+	"url": "https://images.freeimages.com/images/large-previews/5c1/beer-1326297.jpg"
 }];
 	
 export default class ImageComponent extends Component {
@@ -57,6 +58,9 @@ export default class ImageComponent extends Component {
                             maxLength = {40}
                             />
                         </View>
+						<View style = { styles.container }>
+						<Image source = {{ uri: 'https://tutorialscapital.com/wp-content/uploads/2017/06/android-logo.png' }} />
+					</View>
                     )
 				})}	
 	   
