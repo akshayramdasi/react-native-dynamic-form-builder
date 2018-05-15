@@ -10,6 +10,7 @@
     "mrn": "^0.1.7",
     "react": "16.3.1",
     "react-native": "0.55.3",
+    "react-native-autogrow-textinput": "^5.1.1",
     "react-native-checkbox": "^2.0.0",
     "react-native-datepicker": "^1.7.2",
     "react-native-datetime-picker": "^1.1.2",
@@ -17,8 +18,10 @@
     "react-native-material-design": "^0.3.7",
     "react-native-material-kit": "^0.5.1",
     "react-native-modal-datetime-picker": "^5.1.0",
+    "react-native-paper": "^1.7.0",
     "react-native-render-html": "^3.9.3",
-    "react-native-ui-xg": "^0.0.6"
+    "react-native-ui-xg": "^0.0.6",
+    "react-native-vector-icons": "^4.6.0"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",

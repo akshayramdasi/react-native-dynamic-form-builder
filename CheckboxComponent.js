@@ -3,7 +3,7 @@ import {
 	Platform,
 	StyleSheet,View
 } from 'react-native';
-import CheckBox from 'react-native-checkbox';
+import {Checkbox} from 'react-native-paper';
 
 const data =[{
 	"name": "abc",
@@ -28,7 +28,11 @@ const data =[{
 }];
 	
 export default class CheckboxComponent extends Component {
+	state = {
+		checked: false,
+	  };
     render() {
+		let { checked } = this.state;
 		return (
 		
 			<View>
@@ -36,10 +40,10 @@ export default class CheckboxComponent extends Component {
 				if(row.type == "check")
 					return(	
                         <View> 
-                        <CheckBox
-                        label={row.name}
-                        onChange={(checked) => console.log('I am checked', checked)}
-                        />
+                      <Checkbox
+        checked={checked}
+        onPress={() => { this.setState({ checked: !checked }); }}
+      />
                         </View>
                     )
 				})}	

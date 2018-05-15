@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {
 	Platform,
-	StyleSheet,Button,
-	Text,TextInput,
+	StyleSheet,
 	View
 } from 'react-native';
-
+import { Button,Caption } from 'react-native-paper';
 const data =[{
 	"name": "abc",
 	"age": 31,
@@ -42,12 +41,12 @@ export default class ButtonComponent extends Component {
 			{data.map(function(row){
 				if(row.type == "button")
 					return(
-						<Button
-						key={row.id}
-						title={row.name}
-						color="#841584"
-						accessibilityLabel="Learn more about this purple button"
-						/>
+						<View>
+						<Button flat onPress={() => console.log('Pressed')}>
+						Press me
+					  </Button>
+					   <Caption>Caption</Caption>
+					   </View>
 					)
 				})}	
 		</View>

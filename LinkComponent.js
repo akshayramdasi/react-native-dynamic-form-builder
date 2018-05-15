@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyleSheet, ListView, Text, TextInput, TouchableHighlight, View} from 'react-native';
+import {StyleSheet,style, ListView, Text, TextInput, TouchableHighlight, View, ScrollView} from 'react-native';
 
 const adresses = [
     {
@@ -49,18 +49,26 @@ export default class LinkComponent extends React.Component {
     };
     render() {
         return (
-             <View>
+             <ScrollView>
                  <View>
                 <TextInput
                     onChangeText={this.searchedAdresses}
                     placeholder="Type your language here"
-                    value={this.searchedAdresses} />
+                    value={this.searchedAdresses} 
+                   
+                     />
                 <ListView
                     dataSource={ds.cloneWithRows(this.state.searchedAdresses)}
-                    renderRow={this.renderAdress} />
+                    renderRow={this.renderAdress}
+                     />
             </View>  
-              </View>
+              </ScrollView>
         );
     }
 }
 
+const styles = StyleSheet.create({
+droplist:{
+    flex:1,
+}
+  });

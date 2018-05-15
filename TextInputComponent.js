@@ -3,8 +3,8 @@ import {
 	Platform,
 	StyleSheet,
 	Text,TextInput,
-	View,} from 'react-native';
-
+    View,} from 'react-native';
+    
 const data =[{
 	"name": "abc",
 	"age": 31,
@@ -13,7 +13,7 @@ const data =[{
 	"id":1
 },
 {
-	"name": "Shubham",
+	"name": "text input component",
 	"age": 30,
 	"city": "Mumbai",
 	"type": "textinput",
@@ -27,11 +27,9 @@ export default class TextInputComponent extends Component {
 			{data.map(function(row){
 				if(row.type == "textinput")
 					return(
-						<TextInput
-						editable = {true}
-						maxLength = {40}
-						placeholder={row.name}
-					  />
+						<View>
+				<TextInput placeholder={row.name} />		
+	</View>
 					) 
 				})}	
 		</View>
@@ -39,4 +37,3 @@ export default class TextInputComponent extends Component {
 	}
 }
 						 
-                   

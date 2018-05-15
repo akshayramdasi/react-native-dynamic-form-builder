@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 import {
 	Platform,
 	StyleSheet,Button,
-	Text,TextInput,
 	View, ScrollView
 } from 'react-native';
 import TextComponent from "./TextComponent";
 import ButtonComponent from "./ButtonComponent";
-import TextInputComponent from "./TextInputComponent";
+import TextAreaComponent from "./TextAreaComponent";
 import CurrencyComponent from "./Currency";
 import CheckboxComponent from "./CheckboxComponent";
 import LinkComponent from "./LinkComponent";
 import FloatTextBox from "./FloatTextBox";
 import DateTimePickerTester from "./DatePickerComponent";
-import SampleComponent from "./SampleComponent";
-
+import TextInputComponent from "./TextInputComponent"
 export default class App extends Component {
 	constructor(props){
 		super(props);	
@@ -27,15 +25,14 @@ export default class App extends Component {
 	 render() {
 		return (
 			<ScrollView>
-				<Text> New Data from json </Text>
 				<TextComponent />
 				<ButtonComponent />
-				<TextInputComponent />
+				<TextAreaComponent />
 				<CurrencyComponent />
 				<CheckboxComponent />
 				<LinkComponent />
 				<DateTimePickerTester />
-				<SampleComponent />
+				<TextInputComponent />
 			</ScrollView>
 		);
 	}
